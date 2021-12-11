@@ -5,8 +5,15 @@
 - Project Completed Date: December 11, 2021
 - Read Me created: December 11, 2021
 
+### Requirements
+This project uses the following python libraries
+
+- [Time](https://docs.python.org/3/library/time.html)
+- [Pandas](https://pandas.pydata.org/docs/)
+- [Numpy](https://numpy.org/)
+
 ### Files used
-To run this program you need the bikeshare.py file which contain the python code for exploring the Bike share records for each city saved as csv 
+To run this program you need the **`bikeshare.py`** file which contain the python code for exploring the Bike share records for each cities saved as csv 
 - **chicago.csv** 
 - **washington.csv** 
 - **new_york_city.csv**
