@@ -262,8 +262,8 @@ def display_raw_data(df, start_index=0, chunk_size=5):
     """Displays raw data in chunks."""
 
     show_raw_data = input('\nWould you like see raw data? Enter yes or no.\n')
-    
-    while show_raw_data.lower() == 'yes' and (start_index + chunk_size) < df.shape[0]:
+    end_index = start_index + chunk_size
+    while show_raw_data.lower() == 'yes' and end_index < df.shape[0]:
         print(df[start_index:start_index+chunk_size])
         show_raw_data = input('\nWould you like see raw data? Enter yes or no.\n')
         start_index += chunk_size
