@@ -95,19 +95,19 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     
     #get user input for city (chicago, new york city, washington) using city id or name.
-    cities = CITIES.copy()
-    city = get_filter('city', cities)
-    print("Selected city: {}".format(city.title()))
+    cities = CITIES.copy() #create a copy of cities
+    city = get_filter('city', cities) #get city filter
+    print("Selected city: {}".format(city.title())) 
 
     #get user input for month (all, january, february, ... , june)
-    months = MONTHS.copy()
-    month = get_filter('month', months, all_option=True)
+    months = MONTHS.copy() #create copy of MONTHS available 
+    month = get_filter('month', months, all_option=True) #get month filter
     print("Selected month: {}".format(month.title()))
 
 
     #get user input for day of week (all, monday, tuesday, ... sunday)
-    days = DAYS.copy()
-    day = get_filter('day', days, all_option=True)
+    days = DAYS.copy() #create a copy of DAYS available
+    day = get_filter('day', days, all_option=True) #get day filter
     print("Selected day: {}".format(day.title()))
 
     print('-'*40)    
@@ -153,7 +153,13 @@ def load_data(city, month, day):
 
 
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel."""
+    """
+    Displays statistics on the most frequent times of travel.
+
+    Args:
+        (DataFrame) df - Filtered Pandas DataFrame
+    
+    """
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
@@ -177,7 +183,13 @@ def time_stats(df):
 
 
 def station_stats(df):
-    """Displays statistics on the most popular stations and trip."""
+    """
+    Displays statistics on the most popular stations and trip.
+
+    Args:
+        (DataFrame) df - Filtered Pandas DataFrame
+    
+    """
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
@@ -202,7 +214,13 @@ def station_stats(df):
 
 
 def trip_duration_stats(df):
-    """Displays statistics on the total and average trip duration."""
+    """
+    Displays statistics on the total and average trip duration.
+
+    Args:
+        (DataFrame) df - Filtered Pandas DataFrame
+    
+    """
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
@@ -221,7 +239,12 @@ def trip_duration_stats(df):
 
 
 def user_stats(df):
-    """Displays statistics on bikeshare users."""
+    """
+    Displays statistics on bikeshare users.
+    
+    Args:
+        (DataFrame) df - Filtered Pandas DataFrame
+    """
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
@@ -259,7 +282,15 @@ def user_stats(df):
     print('-'*40)
 
 def display_raw_data(df, start_index=0, chunk_size=5):
-    """Displays raw data in chunks."""
+    """
+    Displays raw data in chunks.
+    
+    Args:
+        (DataFrame) df - Filtered Pandas DataFrame
+        (int) start_index - Begining of slice for each chunk default 0
+        (int) chunk_size - Size of each chunk default 5
+    
+    """
 
     show_raw_data = input('\nWould you like see raw data? Enter yes or no.\n')
     
